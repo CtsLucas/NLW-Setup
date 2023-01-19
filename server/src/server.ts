@@ -8,15 +8,15 @@ const prisma = new PrismaClient();
 app.register(cors);
 
 app.get('/habits', async () => {
-    const habits = await prisma.habit.findMany();
+  const habits = await prisma.habit.findMany();
 
-    return habits;
+  return habits;
 });
 
 app
-    .listen({
-        port: 3333,
-    })
-    .then(() => {
-        console.log('🚀 Server is running in port: http://localhost:3333');
-    });
+  .listen({
+    port: 3333,
+  })
+  .then(() => {
+    console.log('🚀 Server is running in port: http://localhost:3333');
+  });
